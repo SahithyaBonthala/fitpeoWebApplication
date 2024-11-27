@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-24T19:41:01 IST" name="Default suite" finished-at="2024-11-24T19:41:33 IST" duration-ms="31340">
+    <groups>
+    </groups>
+    <test started-at="2024-11-24T19:41:01 IST" name="Default test" finished-at="2024-11-24T19:41:33 IST" duration-ms="31340">
+      <class name="com.TestCases.Tasks">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.TestCases.Tasks@618425b5]" started-at="2024-11-24T19:41:01 IST" name="setUp" finished-at="2024-11-24T19:41:07 IST" duration-ms="5978" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="navigateToFitpeoHomePage()[pri:1, instance:com.TestCases.Tasks@618425b5]" started-at="2024-11-24T19:41:07 IST" name="navigateToFitpeoHomePage" description="navigating to the fitpeo homepage" finished-at="2024-11-24T19:41:32 IST" duration-ms="24796" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToFitpeoHomePage -->
+        <test-method signature="navigateToTheRevenueCalculatorPage()[pri:2, instance:com.TestCases.Tasks@618425b5]" started-at="2024-11-24T19:41:32 IST" name="navigateToTheRevenueCalculatorPage" description="navigating to the revenue calculator page" finished-at="2024-11-24T19:41:32 IST" duration-ms="245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- navigateToTheRevenueCalculatorPage -->
+        <test-method signature="scrollDownToTheSliderSection()[pri:3, instance:com.TestCases.Tasks@618425b5]" started-at="2024-11-24T19:41:32 IST" name="scrollDownToTheSliderSection" description="Scroll down to the Slider section" finished-at="2024-11-24T19:41:33 IST" duration-ms="104" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scrollDownToTheSliderSection -->
+      </class> <!-- com.TestCases.Tasks -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

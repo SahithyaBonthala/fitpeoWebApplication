@@ -1,0 +1,75 @@
+package com.TestCases;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+
+public class Tasks {
+	
+	WebDriver driver ;
+	String applicationUrlAddress = "https://fitpeo.com/";
+	
+	@BeforeTest
+	public void setUp()
+	{
+		
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+	}
+	
+	@Test(priority=1,description="navigating to the fitpeo homepage")
+	public void navigateToFitpeoHomePage() {
+		
+		driver.get(applicationUrlAddress);
+
+	}
+	
+	@Test(priority=2,description="navigating to the revenue calculator page")
+	public void navigateToTheRevenueCalculatorPage() throws InterruptedException {
+		
+		driver.findElement(By.xpath("//*[text()='Revenue Calculator']")).click();
+		Thread.sleep(5000);
+	}
+	
+	@Test(priority=3,description="Scroll down to the Slider section")
+	public void scrollDownToTheSliderSection() throws InterruptedException {
+		
+		 JavascriptExecutor js = (JavascriptExecutor) driver;
+		
+		 js.executeScript("window.scrollBy(0,500)");
+		 
+		
+	}
+	
+	@Test(priority=4,description="Adjusting slider value to 820")
+	public void adjustingSliderValueTo820() throws InterruptedException {
+		
+		Actions actions = new Actions(driver);
+		WebElement dragMeToMyTarget = driver.findElement(By.xpath("//*[@style='left: 10%;']"));
+		Thread.sleep(5000);
+      // WebElement droppable = driver.findElement(By.xpath("//*[@style='left: 0%; width: 41%;']"));
+      actions.clickAndHold(dragMeToMyTarget).moveByOffset(94, 0).release().perform();
+      actions.clickAndHold(dragMeToMyTarget).moveByOffset(-1, 0).release().perform();
+      // actions.dragAndDrop(dragMeToMyTarget, droppable).build().perform();
+       
+		 
+	}
+	
+	//@AfterTest
+		public void teardown()
+		{
+			driver.quit();
+		}
+	
+	
+
+}
